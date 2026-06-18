@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { num: 500, suffix: '+', label: 'Jóvenes acompañados/as', desc: 'en trayectorias de formación y empleo', color: 'var(--eos-orange)' },
-  { num: 12, suffix: '+', label: 'Programas activos', desc: 'en diferentes barrios de Rosario', color: 'var(--eos-blue)' },
+  { num: 12, suffix: '+', label: 'Líneas de acción', desc: 'en diferentes barrios de Rosario', color: 'var(--eos-blue)' },
   { num: 30, suffix: '+', label: 'Organizaciones aliadas', desc: 'en red de trabajo colaborativo', color: 'var(--eos-green)' },
   { num: 8, suffix: ' años', label: 'De trayectoria', desc: 'construyendo junto a las comunidades', color: 'var(--eos-red)' },
 ];
@@ -44,8 +44,9 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 }
 
 const allies = [
-  'Ministerio de Desarrollo Social', 'Municipalidad de Rosario', 'UNR',
-  'INTA', 'CELS', 'Caritas Rosario', 'FUNAS', 'Red de Empresas B',
+  'AMR', 'UNR', 'Ministerio de Igualdad y Desarrollo Humano', 'Subsecretaria de Salud Mental',
+  'Colegio de Psicologos 2da Circ.', 'INTA', 'Mesa de Articulación de Niñez y adolescencia',
+  'Wetlands Internacional Argentina', 'Movimiento Chicos del Pueblo', 'IE3 Global Internships'
 ];
 
 export function Impact() {
@@ -90,7 +91,7 @@ export function Impact() {
         >
           <div className="relative z-10 text-white max-w-2xl">
             <svg width="40" height="28" viewBox="0 0 40 28" fill="none" className="mb-4 opacity-50">
-              <path d="M0 28V16.8C0 12.5867 1.04 8.96 3.12 5.92C5.2 2.88 8.48 0.96 12.96 0.16L14.56 3.04C11.68 3.68 9.49333 4.96 8 6.88C6.50667 8.80 5.76 11.04 5.76 13.6H11.2V28H0ZM22.4 28V16.8C22.4 12.5867 23.44 8.96 25.52 5.92C27.6 2.88 30.88 0.96 35.36 0.16L36.96 3.04C34.08 3.68 31.8933 4.96 30.4 6.88C28.9067 8.80 28.16 11.04 28.16 13.6H33.6V28H22.4Z" fill="white"/>
+              <path d="M0 28V16.8C0 12.5867 1.04 8.96 3.12 5.92C5.2 2.88 8.48 0.96 12.96 0.16L14.56 3.04C11.68 3.68 9.49333 4.96 8 6.88C6.50667 8.80 5.76 11.04 5.76 13.6H11.2V28H0ZM22.4 28V16.8C22.4 12.5867 23.44 8.96 25.52 5.92C27.6 2.88 30.88 0.96 35.36 0.16L36.96 3.04C34.08 3.68 31.8933 4.96 30.4 6.88C28.9067 8.80 28.16 11.04 28.16 13.6H33.6V28H22.4Z" fill="white" />
             </svg>
             <p style={{ fontSize: '1.2rem', lineHeight: 1.7, fontWeight: 600 }}>
               Cuando llegué al taller no sabía si iba a poder. Ahora tengo mi propio emprendimiento

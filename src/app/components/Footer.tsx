@@ -2,7 +2,7 @@ import { Instagram, Facebook, Heart } from "lucide-react";
 
 const navLinks = [
   { label: 'Quiénes somos', href: '#nosotros' },
-  { label: 'Programas', href: '#programas' },
+  { label: 'Acciones', href: '#programas' },
   { label: 'Impacto', href: '#impacto' },
   { label: 'Contacto', href: '#contacto' },
 ];
@@ -100,10 +100,10 @@ export function Footer() {
           className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{ borderColor: 'rgba(255,255,255,0.1)', opacity: 0.5, fontSize: '0.8rem' }}
         >
-          <span>© 2024 Fundación EOS. Rosario, Argentina.</span>
+          <span>© 2026 Fundación EOS. Rosario, Argentina. <br />Desarrollo x <a href="https://github.com/tisoler" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--eos-orange)' }}>Tisoler</a></span>
           <span>Hecho con amor por y para los jóvenes</span>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }

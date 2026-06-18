@@ -9,7 +9,7 @@ interface NavbarProps {
 const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Quiénes somos", href: "#nosotros" },
-  { label: "Programas", href: "#programas" },
+  { label: "Acciones", href: "#programas" },
   { label: "Impacto", href: "#impacto" },
   { label: "Contacto", href: "#contacto" },
 ];

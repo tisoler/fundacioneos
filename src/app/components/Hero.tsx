@@ -37,11 +37,22 @@ export function Hero() {
         </h1>
 
         <p
+          className="text-muted-foreground max-w-2xl mx-auto mb-3"
+          style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
+        >
+          Construimos derechos, fortalecemos comunidades y generamos oportunidades para las nuevas generaciones.
+        </p>
+        <p
+          className="text-muted-foreground max-w-2xl mx-auto mb-3"
+          style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
+        >
+          Desde 2014, Fundación EOS impulsa procesos de transformación social junto a organizaciones comunitarias, instituciones públicas y actores de la sociedad civil, promoviendo los derechos humanos, la salud mental, la inclusión educativa, el desarrollo juvenil, la cultura comunitaria y la conservación de la biodiversidad.
+        </p>
+        <p
           className="text-muted-foreground max-w-2xl mx-auto mb-8"
           style={{ fontSize: '1.125rem', lineHeight: 1.7 }}
         >
-          Trabajamos junto a jóvenes, familias y organizaciones sociales de Rosario para construir
-          trayectorias de vida con formación, oportunidades productivas y empleabilidad.
+          Trabajamos para que niñas, niños, adolescentes y jóvenes de sectores populares puedan desarrollar plenamente sus capacidades y ejercer sus derechos en entornos más justos, inclusivos y sostenibles.
         </p>
 
         <div className="flex flex-wrap gap-3 justify-center">
@@ -50,7 +61,7 @@ export function Hero() {
             className="px-6 py-3 rounded-full text-primary-foreground transition-all hover:opacity-90 hover:scale-[1.03] active:scale-[0.98]"
             style={{ background: 'var(--primary)', fontWeight: 700, fontFamily: 'Nunito, sans-serif' }}
           >
-            Conocé nuestros programas
+            Conocé nuestras acciones
           </a>
           <a
             href="#contacto"
@@ -65,7 +76,7 @@ export function Hero() {
         <div className="mt-12 grid grid-cols-3 gap-4 w-full max-w-lg">
           {[
             { num: '+500', label: 'Jóvenes', color: 'var(--eos-orange)' },
-            { num: '12+', label: 'Programas', color: 'var(--eos-green)' },
+            { num: '12+', label: 'Líneas de acción', color: 'var(--eos-green)' },
             { num: '8 años', label: 'de historia', color: 'var(--eos-blue)' },
           ].map((s) => (
             <div key={s.label} className="bg-card rounded-2xl p-4 shadow-sm border border-border flex flex-col items-center">

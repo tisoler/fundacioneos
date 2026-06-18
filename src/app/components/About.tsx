@@ -5,22 +5,22 @@ const values = [
     icon: Heart,
     color: 'var(--eos-red)',
     bg: 'rgba(230, 50, 40, 0.1)',
-    title: 'Proximidad',
-    desc: 'Nos acercamos a los territorios y comunidades donde viven jóvenes y familias, construyendo vínculos de confianza duraderos.',
+    title: 'Proximidad por Nuestra Misión',
+    desc: 'Promover el ejercicio pleno de los derechos humanos mediante acciones educativas, culturales, comunitarias, ambientales y de salud mental que contribuyan a la inclusión social, el fortalecimiento comunitario y el desarrollo integral de las personas.',
   },
   {
     icon: Users,
     color: 'var(--eos-green)',
     bg: 'rgba(91, 180, 69, 0.1)',
-    title: 'Encuentro',
-    desc: 'Creemos en la potencia del trabajo colectivo. Articulamos organizaciones, saberes y personas para generar transformaciones reales.',
+    title: 'Encuentro por Nuestra Visión',
+    desc: 'Construir una sociedad más justa, democrática y sostenible, donde todas las personas, especialmente niñas, niños, adolescentes y jóvenes en situación de vulnerabilidad, tengan acceso efectivo a sus derechos y oportunidades para desarrollar sus proyectos de vida.',
   },
   {
     icon: Lightbulb,
     color: 'var(--eos-blue)',
     bg: 'rgba(63, 169, 245, 0.1)',
     title: 'Innovación Social',
-    desc: 'Desarrollamos propuestas creativas y adaptadas al contexto local, que abren horizontes de posibilidad para cada joven.',
+    desc: 'Desarrollamos soluciones integrales y colaborativas para abordar problemáticas complejas vinculadas a los derechos humanos, las infancias, las juventudes, la salud mental, la inclusión sociolaboral, la cultura y el ambiente. A través de la creación de espacios de formación, producción cultural, cuidado comunitario, inserción laboral juvenil y conservación de la biodiversidad, la Fundación impulsa procesos sostenibles que fortalecen capacidades locales, promueven el ejercicio de derechos y producen transformaciones sociales duraderas. Su capacidad para conectar saberes diversos, construir alianzas estratégicas y desarrollar iniciativas replicables con impacto social y ambiental la posiciona como un actor clave en la generación de innovación social orientada al desarrollo humano sostenible.',
   },
 ];
 
@@ -43,15 +43,17 @@ export function About() {
               desde y para los{' '}
               <span style={{ color: 'var(--eos-orange)' }}>territorios</span>
             </h2>
-            <p className="text-muted-foreground mb-5" style={{ lineHeight: 1.75 }}>
-              Fundación EOS — <em>Encuentro de Organizaciones y Saberes</em> — nace en Rosario con la convicción
-              de que cada joven tiene el derecho a un proyecto de vida digno. Desde hace más de 8 años
-              acompañamos trayectorias de infancia y juventud junto a organizaciones sociales, familias
-              y el Estado.
+            <p className="text-muted-foreground mb-3" style={{ lineHeight: 1.75 }}>
+              Fundación EOS (Encuentro de Organizaciones y Saberes) surge del recorrido colectivo de organizaciones sociales, centros comunitarios y referentes territoriales que desde 2006 impulsan acciones en defensa de los derechos de las infancias, adolescencias y juventudes en la provincia de Santa Fe.
+            </p>
+            <p className="text-muted-foreground mb-3" style={{ lineHeight: 1.75 }}>
+              Nuestra historia se encuentra profundamente vinculada a la de protección integral de derechos, la promoción de la participación comunitaria y el fortalecimiento de organizaciones populares. Desde hace más de 8 años acompañamos trayectorias de infancia y juventud junto a organizaciones sociales, familias y el Estado.
+            </p>
+            <p className="text-muted-foreground mb-3" style={{ lineHeight: 1.75 }}>
+              Nuestro trabajo articula formación, cultura, deporte y proyectos productivos para fortalecer la empleabilidad y la participación ciudadana de los y las jóvenes de nuestra ciudad.
             </p>
             <p className="text-muted-foreground mb-8" style={{ lineHeight: 1.75 }}>
-              Nuestro trabajo articula formación, cultura, deporte y proyectos productivos para fortalecer
-              la empleabilidad y la participación ciudadana de los y las jóvenes de nuestra ciudad.
+              Con personería jurídica otorgada en 2014, Fundación EOS consolida una plataforma institucional capaz de articular esfuerzos entre organizaciones sociales, organismos públicos, universidades, empresas y agencias de cooperación para promover procesos de desarrollo humano sostenible.
             </p>
 
             {/* Rainbow accent bar */}

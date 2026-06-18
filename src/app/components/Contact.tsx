@@ -52,9 +52,11 @@ export function Contact() {
             <h2 className="text-foreground mb-4" style={{ fontFamily: 'Nunito, sans-serif' }}>
               ¿Querés ser parte?
             </h2>
+            <p className="text-muted-foreground mb-2" style={{ lineHeight: 1.75 }}>
+              Trabajamos para que los derechos se conviertan en oportunidades reales para las personas y comunidades.
+            </p>
             <p className="text-muted-foreground mb-8" style={{ lineHeight: 1.75 }}>
-              Ya sea que quieras participar de nuestros programas, sumar tu organización a la red,
-              hacer una donación o simplemente conocernos, estamos acá. Escribinos y te respondemos.
+              Contactanos para desarrollar proyectos conjuntos, alianzas estratégicas o iniciativas de financiamiento.
             </p>
 
             <div className="flex flex-col gap-5">
