@@ -47,7 +47,7 @@ export function About() {
               Fundación EOS (Encuentro de Organizaciones y Saberes) surge del recorrido colectivo de organizaciones sociales, centros comunitarios y referentes territoriales que desde 2006 impulsan acciones en defensa de los derechos de las infancias, adolescencias y juventudes en la provincia de Santa Fe.
             </p>
             <p className="text-muted-foreground mb-3" style={{ lineHeight: 1.75 }}>
-              Nuestra historia se encuentra profundamente vinculada a la de protección integral de derechos, la promoción de la participación comunitaria y el fortalecimiento de organizaciones populares. Desde hace más de 8 años acompañamos trayectorias de infancia y juventud junto a organizaciones sociales, familias y el Estado.
+              Nuestra historia se encuentra profundamente vinculada a la de protección integral de derechos, la promoción de la participación comunitaria y el fortalecimiento de organizaciones populares. Desde hace más de 12 años acompañamos trayectorias de infancia y juventud junto a organizaciones sociales, familias y el Estado.
             </p>
             <p className="text-muted-foreground mb-3" style={{ lineHeight: 1.75 }}>
               Nuestro trabajo articula formación, cultura, deporte y proyectos productivos para fortalecer la empleabilidad y la participación ciudadana de los y las jóvenes de nuestra ciudad.

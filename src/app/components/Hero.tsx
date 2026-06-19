@@ -77,7 +77,7 @@ export function Hero() {
           {[
             { num: '+500', label: 'Jóvenes', color: 'var(--eos-orange)' },
             { num: '12+', label: 'Líneas de acción', color: 'var(--eos-green)' },
-            { num: '8 años', label: 'de historia', color: 'var(--eos-blue)' },
+            { num: '12 años', label: 'de historia', color: 'var(--eos-blue)' },
           ].map((s) => (
             <div key={s.label} className="bg-card rounded-2xl p-4 shadow-sm border border-border flex flex-col items-center">
               <span className="text-2xl font-black" style={{ color: s.color, fontFamily: 'Nunito, sans-serif' }}>{s.num}</span>

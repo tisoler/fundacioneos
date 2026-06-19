@@ -22,13 +22,30 @@ export function Contact() {
     return e;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
     setErrors({});
     setSending(true);
-    setTimeout(() => { setSending(false); setSent(true); }, 1500);
+    try {
+      const res = await fetch('https://chasqui.tisoler.net.ar/v1/mail/contacto/eos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombreApellido: form.nombre,
+          email: form.email,
+          interes: form.tipo,
+          mensaje: form.mensaje,
+        }),
+      });
+      if (!res.ok) throw new Error('Error al enviar el mensaje');
+      setSent(true);
+    } catch {
+      setErrors({ mensaje: 'Ocurrió un error al enviar el mensaje. Intentá de nuevo.' });
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

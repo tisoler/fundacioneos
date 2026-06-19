@@ -4,7 +4,7 @@ const stats = [
   { num: 500, suffix: '+', label: 'Jóvenes acompañados/as', desc: 'en trayectorias de formación y empleo', color: 'var(--eos-orange)' },
   { num: 12, suffix: '+', label: 'Líneas de acción', desc: 'en diferentes barrios de Rosario', color: 'var(--eos-blue)' },
   { num: 30, suffix: '+', label: 'Organizaciones aliadas', desc: 'en red de trabajo colaborativo', color: 'var(--eos-green)' },
-  { num: 8, suffix: ' años', label: 'De trayectoria', desc: 'construyendo junto a las comunidades', color: 'var(--eos-red)' },
+  { num: 12, suffix: ' años', label: 'De trayectoria', desc: 'construyendo junto a las comunidades', color: 'var(--eos-red)' },
 ];
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
