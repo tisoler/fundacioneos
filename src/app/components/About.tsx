@@ -1,4 +1,5 @@
 import { Heart, Users, Lightbulb } from "lucide-react";
+import { ImageCarousel } from "./ImageCarousel";
 
 const values = [
   {
@@ -97,7 +98,86 @@ export function About() {
             ))}
           </div>
         </div>
+
+        {/* Story in images carousel */}
+        <div className="mt-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+            <h2 className="text-foreground" style={{ fontFamily: 'Nunito, sans-serif' }}>
+              Nuestra historia en{' '}
+              <span style={{ color: 'var(--eos-green)' }}>imágenes</span>
+            </h2>
+            <p className="text-muted-foreground max-w-sm" style={{ fontSize: '0.95rem', lineHeight: 1.7 }}>
+              Momentos de nuestros talleres, proyectos y territorios.
+            </p>
+          </div>
+          <ImageCarousel
+            slides={storySlides}
+            interval={4500}
+            showArrows
+            showDots
+            showCaptions
+            aspectClassName="aspect-[16/12.096] md:aspect-[16/8.855]"
+            className="rounded-3xl"
+          />
+        </div>
       </div>
     </section>
   );
 }
+
+const storySlides = [
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/educacion.webp',
+    alt: 'Apoyo educativo a niñas y niños',
+    caption: 'Acompañamos las trayectorias educativas',
+    subcaption: 'Espacios de apoyo escolar y promoción de derechos',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/educacion1.webp',
+    alt: 'Espacio educativo comunitario',
+    caption: 'Aprendizaje en comunidad',
+    subcaption: 'Saberes que se comparten y transforman',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/cultura1.webp',
+    alt: 'Taller de creación colectiva',
+    caption: 'Creación colectiva',
+    subcaption: 'Teatro y expresiones comunitarias',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/cultura2.webp',
+    alt: 'Producción musical de jóvenes',
+    caption: 'Música y producción',
+    subcaption: 'Laboratorio de grabación y edición',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/ecologia1.webp',
+    alt: 'Huerta agroecológica urbana',
+    caption: 'Huerta agroecológica',
+    subcaption: 'Producción sustentable y soberanía alimentaria',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/ecologia2.webp',
+    alt: 'Acciones de restauración ecológica',
+    caption: 'Cuidado del ambiente',
+    subcaption: 'Restauración ecológica y especies nativas',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/formacion1.webp',
+    alt: 'Capacitación en oficios',
+    caption: 'Capacitación en oficios',
+    subcaption: 'Nuevas tecnologías y habilidades para el trabajo',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/infancia1.webp',
+    alt: 'Espacio de juego para las infancias',
+    caption: 'Juegos y cuidados',
+    subcaption: 'Espacios de recreación protegida',
+  },
+  {
+    src: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/carrusel/produccion1.webp',
+    alt: 'Emprendimientos productivos juveniles',
+    caption: 'Emprendimientos productivos',
+    subcaption: 'Proyectos que generan ingresos y autonomía',
+  },
+];

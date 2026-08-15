@@ -3,6 +3,7 @@ import { GraduationCap, Wrench, Recycle, Music, UserPlus, BookOpen } from "lucid
 const programs = [
   {
     icon: GraduationCap,
+    image: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/tarjeta/formacion.webp',
     color: 'var(--eos-orange)',
     bg: 'rgba(244,136,42,0.12)',
     category: 'Formación',
@@ -13,6 +14,7 @@ const programs = [
   },
   {
     icon: Wrench,
+    image: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/tarjeta/produccion.webp',
     color: 'var(--eos-blue)',
     bg: 'rgba(63,169,245,0.12)',
     category: 'Empleabilidad',
@@ -23,6 +25,7 @@ const programs = [
   },
   {
     icon: Recycle,
+    image: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/tarjeta/ecologia.webp',
     color: 'var(--eos-green)',
     bg: 'rgba(91,180,69,0.12)',
     category: 'Productivo',
@@ -33,6 +36,7 @@ const programs = [
   },
   {
     icon: Music,
+    image: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/tarjeta/cultura.webp',
     color: 'var(--eos-red)',
     bg: 'rgba(230,50,40,0.12)',
     category: 'Cultura',
@@ -43,6 +47,7 @@ const programs = [
   },
   {
     icon: UserPlus,
+    image: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/tarjeta/derechos.webp',
     color: 'var(--eos-yellow)',
     bg: 'rgba(245,197,24,0.12)',
     category: 'Derechos',
@@ -53,6 +58,7 @@ const programs = [
   },
   {
     icon: BookOpen,
+    image: 'https://tisolercdn.nyc3.cdn.digitaloceanspaces.com/fundacioneos/tarjeta/infancia.webp',
     color: 'var(--eos-blue)',
     bg: 'rgba(63,169,245,0.12)',
     category: 'Educación',
@@ -87,41 +93,57 @@ export function Programs() {
           {programs.map((p) => (
             <article
               key={p.title}
-              className="bg-card rounded-2xl p-6 border border-border hover:shadow-lg transition-all duration-200 hover:-translate-y-1 flex flex-col"
+              className="bg-card rounded-2xl border border-border hover:shadow-lg transition-all duration-200 hover:-translate-y-1 flex flex-col overflow-hidden"
             >
-              <div className="flex items-start gap-4 mb-4">
+              <div className="relative h-44 shrink-0 overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={`${p.category} - ${p.title}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover object-center"
+                />
                 <div
-                  className="shrink-0 w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: p.bg }}
+                  className="absolute inset-0"
+                  style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 55%, transparent 75%)' }}
+                />
+                <span
+                  className="absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider"
+                  style={{ background: 'rgba(255,255,255,0.92)', color: p.color }}
                 >
-                  <p.icon size={22} style={{ color: p.color }} />
-                </div>
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-wider" style={{ color: p.color }}>
-                    {p.category}
-                  </span>
-                  <h3 className="text-foreground mt-0.5" style={{ fontFamily: 'Nunito, sans-serif', fontSize: '1.05rem' }}>
+                  {p.category}
+                </span>
+              </div>
+
+              <div className="p-6 flex flex-col flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="shrink-0 w-11 h-11 rounded-xl flex items-center justify-center"
+                    style={{ background: p.bg }}
+                  >
+                    <p.icon size={20} style={{ color: p.color }} />
+                  </div>
+                  <h3 className="text-foreground" style={{ fontFamily: 'Nunito, sans-serif', fontSize: '1.05rem' }}>
                     {p.title}
                   </h3>
                 </div>
-              </div>
-              <h4 className="text-foreground mt-0.5" style={{ fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem' }}>
-                {p.subtitle}
-              </h4>
-              <p className="text-muted-foreground flex-1 mt-2 mb-4" style={{ fontSize: '0.875rem', lineHeight: 1.7 }}>
-                {p.desc}
-              </p>
+                <h4 className="text-foreground mt-0.5" style={{ fontFamily: 'Nunito, sans-serif', fontSize: '0.9rem' }}>
+                  {p.subtitle}
+                </h4>
+                <p className="text-muted-foreground flex-1 mt-2 mb-4" style={{ fontSize: '0.875rem', lineHeight: 1.7 }}>
+                  {p.desc}
+                </p>
 
-              <div className="flex flex-wrap gap-1.5">
-                {p.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="px-2.5 py-1 rounded-full text-xs font-semibold"
-                    style={{ background: p.bg, color: p.color }}
-                  >
-                    {t}
-                  </span>
-                ))}
+                <div className="flex flex-wrap gap-1.5">
+                  {p.tags.map((t) => (
+                    <span
+                      key={t}
+                      className="px-2.5 py-1 rounded-full text-xs font-semibold"
+                      style={{ background: p.bg, color: p.color }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
             </article>
           ))}
