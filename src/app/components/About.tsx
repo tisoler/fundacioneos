@@ -103,8 +103,8 @@ export function About() {
         <div className="mt-16">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
             <h2 className="text-foreground" style={{ fontFamily: 'Nunito, sans-serif' }}>
-              Nuestra historia en{' '}
-              <span style={{ color: 'var(--eos-green)' }}>imágenes</span>
+              <span style={{ color: 'var(--eos-green)' }}>Postales</span>
+              {' '}de nuestro recorrido
             </h2>
             <p className="text-muted-foreground max-w-sm" style={{ fontSize: '0.95rem', lineHeight: 1.7 }}>
               Momentos de nuestros talleres, proyectos y territorios.
