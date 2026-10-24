@@ -1,0 +1,38 @@
+# Dockerfile para fundacion-eos (React/Vite)
+
+FROM node:24.22.1-alpine AS builder
+
+WORKDIR /app
+
+# Copiar archivos de dependencias
+COPY package.json pnpm-lock.yaml ./
+
+# Instalar pnpm
+RUN npm install -g pnpm
+
+# Instalar dependencias
+RUN pnpm install --frozen-lockfile
+
+# Copiar código fuente
+COPY . .
+
+# Construir la aplicación
+RUN pnpm run build
+
+# Imagen de producción con Apache
+FROM httpd:alpine
+
+# Copiar configuración de Apache para permitir .htaccess (por consistencia con UI)
+RUN sed -i \
+    -e 's/^#\(LoadModule rewrite_module modules\/mod_rewrite.so\)/\1/' \
+    -e 's/AllowOverride None/AllowOverride All/g' \
+    /usr/local/apache2/conf/httpd.conf
+
+# Copiar la salida estática generada por vite-react-ssg
+COPY --from=builder /app/dist/. /usr/local/apache2/htdocs/
+
+# Exponer puerto (Apache escucha en 80 por defecto)
+EXPOSE 80
+
+# Iniciar Apache
+CMD ["httpd", "-D", "FOREGROUND"]
